@@ -508,6 +508,7 @@ Channel.prototype.maybeResendUserlist = function maybeResendUserlist(user, newRa
 
 Channel.prototype.packUserData = function (user) {
     var base = {
+        id: user.account.user.id,
         name: user.getName(),
         rank: user.account.effectiveRank,
         profile: user.account.profile,
@@ -518,6 +519,7 @@ Channel.prototype.packUserData = function (user) {
     };
 
     var mod = {
+        id: user.account.user.id,
         name: user.getName(),
         rank: user.account.effectiveRank,
         profile: user.account.profile,
@@ -531,6 +533,7 @@ Channel.prototype.packUserData = function (user) {
     };
 
     var sadmin = {
+        id: user.account.user.id,
         name: user.getName(),
         rank: user.account.effectiveRank,
         profile: user.account.profile,
